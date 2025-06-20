@@ -1,0 +1,28 @@
+/project/sandbox/user-workspace/venv/lib/python3.10/site-packages/flask_limiter/extension.py:324: UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+  warnings.warn(
+ * Serving Flask app 'app'
+ * Debug mode: off
+08:15:11 Worker rq:worker:b81cf38555b846d6861fdfeffe4ddc66 started with PID 5937, version 2.4.0
+08:15:11 Subscribing to channel rq:pubsub:b81cf38555b846d6861fdfeffe4ddc66
+08:15:11 *** Listening on easm...
+Exception in thread Thread-2 (run_worker):
+Traceback (most recent call last):
+  File "/home/codespace/.python/current/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/codespace/.python/current/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+08:15:11 Scheduler for easm started with PID 5942
+  File "/project/sandbox/user-workspace/app/services/scan_service.py", line 48, in run_worker
+    worker.work(with_scheduler=True)
+  File "/project/sandbox/user-workspace/venv/lib/python3.10/site-packages/rq/worker.py", line 599, in work
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.17.0.2:5001
+[33mPress CTRL+C to quit[0m
+    self._install_signal_handlers()
+  File "/project/sandbox/user-workspace/venv/lib/python3.10/site-packages/rq/worker.py", line 551, in _install_signal_handlers
+    signal.signal(signal.SIGINT, self.request_stop)
+  File "/home/codespace/.python/current/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
