@@ -1,0 +1,22 @@
+Testing auth endpoints...
+Register: 400 {"error":"User already exists"}
+
+Login: 200 {"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDQwNzMxMywianRpIjoiMDUyZjUyMDAtZTJlNS00OTI1LWJkOTctMWFkM2E2OGZhZDgyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTA0MDczMTMsImNzcmYiOiIyYWE0OGIxOS1mNTRmLTQ5ZGQtODFlNi1hYWNmMTY1YjIwYjYiLCJleHAiOjE3NTA0MDgyMTN9.w3TGPJfJUhNU7X0lkCN7NgRcObgD-AF7bXCShkkhYzk","message":"Login successful","role":"user"}
+
+Testing scan endpoints...
+Start scan: 200 {"message":"Scan started","scan_id":"2"}
+
+Get scans: 200 {"scans":[{"completed_at":null,"created_at":"2025-06-20T08:00:32.900401","custom_ports":null,"id":"1","options":"{}","run_nuclei":0,"scan_type":"fast_tcp","status":"running","targets":"[\"ganasec.com\"]","user_id":1},{"completed_at":null,"created_at":"2025-06-20T08:15:13.511081","custom_ports":null,"id":"2","options":"{}","run_nuclei":0,"scan_type":"fast_tcp","status":"running","targets":"[\"ganasec.com\"]","user_id":1}]}
+
+Testing remediation endpoints...
+Get tickets: 200 {"tickets":[]}
+
+Testing enrichment endpoints...
+Enrich scan: 200 {"scan_id":1,"status":"enriched"}
+
+Testing security endpoints...
+Get security settings: 200 {"anomalies_detected":0,"rate_limit":"1000/hour"}
+
+Testing audit endpoints...
+Get audit logs: 200 {"logs":[{"action":"signin","details":"User testuser@example.com signed in","ip":"127.0.0.1","timestamp":"2025-06-20T08:15:13.499093","user_id":1},{"action":"signin","details":"User testuser@example.com signed in","ip":"127.0.0.1","timestamp":"2025-06-20T08:00:32.884032","user_id":1},{"action":"signin","details":"User testuser@example.com signed in","ip":"127.0.0.1","timestamp":"2025-06-20T07:59:56.348216","user_id":1},{"action":"signin","details":"User testuser@example.com signed in","ip":"127.0.0.1","timestamp":"2025-06-20T07:57:09.500662","user_id":1},{"action":"signin","details":"User testuser@example.com signed in","ip":"127.0.0.1","timestamp":"2025-06-20T07:50:37.143350","user_id":1},{"action":"signin","details":"User testuser@example.com signed in","ip":"127.0.0.1","timestamp":"2025-06-20T07:48:45.858116","user_id":1}]}
+
